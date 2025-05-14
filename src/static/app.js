@@ -31,11 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
             ${
               details.participants && details.participants.length > 0
                 ? `<ul class="participants-list">${details.participants
-                    .map(
-                      (email) =>
-                        `<li><span class="participant-avatar">${email
-                          .charAt(0)
-                          .toUpperCase()}</span> ${email}</li>`
+                    .map(participant =>
+                      `<li><span class="participant-avatar">${participant
+                        .charAt(0)
+                        .toUpperCase()}</span> ${participant}</li>`
                     )
                     .join("")}</ul>`
                 : `<span class="no-participants">No participants yet.</span>`
